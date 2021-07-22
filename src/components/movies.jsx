@@ -7,6 +7,11 @@ class Movies extends Component {
     movies: getMovies,
     // movies: getMoviese(),
   };
+
+  handleDelete = (movieElm) => {
+    console.log(movieElm);
+  };
+
   render() {
     return (
       <table className="table">
@@ -27,7 +32,11 @@ class Movies extends Component {
               <td>{movie.genre.name}</td>
               <td>{movie.numberInstock}</td>
               <td>{movie.dailyRentalRate}</td>
-              <button className="btn btn-danger btn-sm"> Delete </button>
+              <button
+                onClick={() => this.handleDelete(movie)}
+                className="btn btn-danger btn-sm">
+                Delete
+              </button>
             </tr>
           ))}
         </tbody>
