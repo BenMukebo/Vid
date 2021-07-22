@@ -9,7 +9,8 @@ class Movies extends Component {
   };
 
   handleDelete = (movieElm) => {
-    console.log(movieElm);
+    const movies = this.state.movies.filter((m) => m._id !== movieElm._id);
+    this.setState({ movies: movies }); // this.setState({ movies });
   };
 
   render() {
