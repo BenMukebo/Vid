@@ -27,16 +27,18 @@ class Movies extends Component {
 
         <tbody>
           {this.state.movies.map((movie) => (
-            <tr>
+            <tr key={movie._id}>
               <td>{movie.title}</td>
               <td>{movie.genre.name}</td>
               <td>{movie.numberInstock}</td>
               <td>{movie.dailyRentalRate}</td>
-              <button
-                onClick={() => this.handleDelete(movie)}
-                className="btn btn-danger btn-sm">
-                Delete
-              </button>
+              <td>
+                <button
+                  onClick={() => this.handleDelete(movie)}
+                  className="btn btn-danger btn-sm">
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
