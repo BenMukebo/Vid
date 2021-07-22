@@ -16,6 +16,7 @@ class Movies extends Component {
             <th>Genre</th>
             <th>Stock</th>
             <th>Rate</th>
+            <th></th>
           </tr>
         </thead>
 
@@ -26,7 +27,7 @@ class Movies extends Component {
               <td>{movie.genre.name}</td>
               <td>{movie.numberInstock}</td>
               <td>{movie.dailyRentalRate}</td>
-              <td></td>
+              <button className="btn btn-danger btn-sm"> Delete </button>
             </tr>
           ))}
         </tbody>
